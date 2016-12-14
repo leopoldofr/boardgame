@@ -42,7 +42,7 @@ public static class Afficheur {
 		int[] posHeroe = heroe.getPosition ();
 		int level = p.getCase (posHeroe [0], posHeroe [1]).getLevel();
 		GameObject h = GameObject.Find("Heroe");
-		h.transform.position = new Vector3( h.transform.position.x ,0.5f + (level * Variables.getCoeffHauteur ()), h.transform.position.z );
+		h.transform.position = new Vector3( heroe.getPosition()[1] ,0.5f + (level * Variables.getCoeffHauteur ()), heroe.getPosition()[0] );
         Quaternion hRotation = Quaternion.LookRotation((h.transform.position - Camera.main.transform.position), new Vector3(0, 1, 1));
         hRotation.x = 0.0f;
         hRotation.z = 0.0f;
@@ -57,17 +57,9 @@ public static class Afficheur {
 
     private static void afficheHeroe(Heroe h)
     {
-        int width = 100;
-        int height = 100;
+		int width = h.getWidth();
+		int height = h.getHeight();
         string file = Application.dataPath + "/Resources/Heroes/";
-
-       switch (h.getImage())
-        {
-            case "hero":
-                width = 459;
-                height = 617;
-                break;
-        }
 
         int[] pos = h.getPosition();
         file = file + h.getImage();

@@ -1,17 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Items\elemList.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Main.cs">
     <Files>
-      <File FileName="Assets\Scripts\Main.cs" Line="22" Column="27" />
-      <File FileName="Assets\Scripts\Plateau.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Items\ItemTypes.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Items\InterfaceItem.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Variables.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Case.cs" Line="8" Column="56" NotebookId="1" />
-      <File FileName="Assets\Scripts\Afficheur.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets\Scripts\textureList.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets\Scripts\Items\Decoration.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets\Scripts\Items\elemList.cs" Line="50" Column="24" NotebookId="1" />
+      <File FileName="Assets\Scripts\Main.cs" Line="13" Column="30" />
+      <File FileName="assets\scripts\Mouvements.cs" Line="69" Column="5" />
+      <File FileName="assets\scripts\Heroes\Heroe.cs" Line="20" Column="16" />
+      <File FileName="assets\scripts\Afficheur.cs" Line="46" Column="43" />
+      <File FileName="assets\scripts\Plateau.cs" Line="55" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

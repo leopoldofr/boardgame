@@ -4,7 +4,7 @@ public class Main : MonoBehaviour {
 
 	public int caseSize = 3;
 	public Plateau plat;
-    Heroe heroe = new Heroe("Leo", new int[] { 2, 2 }, "hero");
+	Heroe heroe = new Heroe("Leo", new int[] { 2, 2 }, "hero", 459, 617,10);
 
     // Use this for initialization
     void Awake(){
@@ -54,7 +54,7 @@ public class Main : MonoBehaviour {
         //Interaction Utilisateurs
         if (Input.GetMouseButtonDown(0))
         {
-            Mouvements.deplaceHeroe(Mouvements.UserClick());
+			Mouvements.deplaceHeroe(Mouvements.UserClick(), heroe);
         }
 
 
