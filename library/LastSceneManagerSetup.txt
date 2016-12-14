@@ -1,0 +1,4 @@
+sceneSetups:
+- path: assets/boardGame.unity
+  isLoaded: 1
+  isActive: 1

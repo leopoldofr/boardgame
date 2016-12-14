@@ -1,0 +1,84 @@
+Mono path[0] = 'C:/Users/leopo/Desktop/BoardGame/boardGame_Data/Managed'
+Mono path[1] = 'C:/Users/leopo/Desktop/BoardGame/boardGame_Data/Mono'
+Mono config path = 'C:/Users/leopo/Desktop/BoardGame/boardGame_Data/Mono/etc'
+PlayerConnection initialized from C:/Users/leopo/Desktop/BoardGame/boardGame_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55223
+Multi-casting "[IP] 192.168.0.50 [Port] 55223 [Flags] 2 [Guid] 1719767001 [EditorId] 2408191370 [Version] 1048832 [Id] WindowsPlayer(DESKTOP-CCKIIKD) [Debug] 0" to [225.0.0.222:54997]...
+Started listening to [0.0.0.0:55223]
+PlayerConnection already initialized - listening to [0.0.0.0:55223]
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4600 (ID=0x416)
+    Vendor:   Intel
+    VRAM:     1136 MB
+    Driver:   20.19.15.4483
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\leopo\Desktop\BoardGame\boardGame_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\leopo\Desktop\BoardGame\boardGame_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\leopo\Desktop\BoardGame\boardGame_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\leopo\Desktop\BoardGame\boardGame_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\leopo\Desktop\BoardGame\boardGame_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\leopo\Desktop\BoardGame\boardGame_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\leopo\Desktop\BoardGame\boardGame_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\leopo\Desktop\BoardGame\boardGame_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\leopo\Desktop\BoardGame\boardGame_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\leopo\Desktop\BoardGame\boardGame_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.081 seconds
+Platform assembly: C:\Users\leopo\Desktop\BoardGame\boardGame_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\leopo\Desktop\BoardGame\boardGame_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 3.526425 ms
+Initialisation des textures...
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+Main:Awake() (at C:\Users\leopo\Desktop\BoardGame\assets\scripts\Main.cs:12)
+ 
+(Filename: C:/Users/leopo/Desktop/BoardGame/assets/scripts/Main.cs Line: 12)
+
+Initialisation de la liste des éléments...
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+Main:Awake() (at C:\Users\leopo\Desktop\BoardGame\assets\scripts\Main.cs:15)
+ 
+(Filename: C:/Users/leopo/Desktop/BoardGame/assets/scripts/Main.cs Line: 15)
+
+Creation du plateau...
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+Main:Awake() (at C:\Users\leopo\Desktop\BoardGame\assets\scripts\Main.cs:19)
+ 
+(Filename: C:/Users/leopo/Desktop/BoardGame/assets/scripts/Main.cs Line: 19)
+
+Lancement des affichages...
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+Main:Start() (at C:\Users\leopo\Desktop\BoardGame\assets\scripts\Main.cs:24)
+ 
+(Filename: C:/Users/leopo/Desktop/BoardGame/assets/scripts/Main.cs Line: 24)
+
+2,2
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+Afficheur:afficheHeroe(Heroe) (at C:\Users\leopo\Desktop\BoardGame\assets\scripts\Afficheur.cs:74)
+Afficheur:afficheJeu(Plateau, Heroe) (at C:\Users\leopo\Desktop\BoardGame\assets\scripts\Afficheur.cs:12)
+Main:Start() (at C:\Users\leopo\Desktop\BoardGame\assets\scripts\Main.cs:27)
+ 
+(Filename: C:/Users/leopo/Desktop/BoardGame/assets/scripts/Afficheur.cs Line: 74)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 1810 -> priority: 1 
