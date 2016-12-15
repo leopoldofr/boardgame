@@ -42,7 +42,7 @@ public static class Afficheur {
 		int[] posHeroe = heroe.getPosition ();
 		int level = p.getCase (posHeroe [0], posHeroe [1]).getLevel();
 		GameObject h = GameObject.Find("Heroe");
-		h.transform.position = new Vector3( heroe.getPosition()[1] ,0.5f + (level * Variables.getCoeffHauteur ()), heroe.getPosition()[0] );
+		h.transform.position = new Vector3( heroe.getPosition()[1] ,0.5f - (Variables.getCoeffHeroe()/2) + (level * Variables.getCoeffHauteur ())  , heroe.getPosition()[0] );
         Quaternion hRotation = Quaternion.LookRotation((h.transform.position - Camera.main.transform.position), new Vector3(0, 1, 1));
         hRotation.x = 0.0f;
         hRotation.z = 0.0f;
@@ -64,11 +64,12 @@ public static class Afficheur {
         int[] pos = h.getPosition();
         file = file + h.getImage();
 		Debug.Log (pos [0] + "," + pos [1]);
+		float coeffHeroes = Variables.getCoeffHeroe();
 
         //On va crée un plan correspond au héros
         GameObject plane = GameObject.CreatePrimitive(PrimitiveType.Quad);
-		plane.transform.localScale = new Vector3(1f * (height/width), 1f, Variables.getCaseSize());
-        plane.transform.position = new Vector3(pos[0], 0.5f, pos[1]);
+		plane.transform.localScale = new Vector3(1f * coeffHeroes * (height/width), 1f * coeffHeroes, 1f);
+		plane.transform.position = new Vector3(pos[0], 0.5f - (coeffHeroes/2) + (coeffHeroes/2), pos[1]);
         plane.transform.rotation = Quaternion.Euler(new Vector3(0f, 180f,180f));
         plane.name = "Heroe";
 
