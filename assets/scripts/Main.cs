@@ -54,7 +54,7 @@ public class Main : MonoBehaviour {
         //Interaction Utilisateurs
         if (Input.GetMouseButtonDown(0))
         {
-			Mouvements.deplaceHeroe(Mouvements.UserClick(), heroe);
+			Mouvements.deplaceHeroe(plat, Mouvements.UserClick(), heroe);
         }
 
 

@@ -25,14 +25,14 @@ public class Plateau{
 			
 			for (int j=0; j<largeur; j++) {
 
-				plateau [i, j] = new Case ();
+				plateau [j, i] = new Case ();
 
 				//Ici on va gérer les hauteurs des cases
-				plateau [i, j].setLevel (Random.Range (0, max));
+				plateau [j, i].setLevel (Random.Range (0, max));
 
 				//Textures
-				plateau [i, j].setTexture (textureList.getTextureAleatoire ());
-				plateau [i, j].addItemAleatoire ();
+				plateau [j, i].setTexture (textureList.getTextureAleatoire ());
+				plateau [j, i].addItemAleatoire ();
 
 			}
 		}
@@ -44,7 +44,8 @@ public class Plateau{
 	}
 	public Case getCase(int x, int y)
 	{
-		return this.plateau [x, y];
+		//Volontaire, inversé à la création
+		return this.plateau [y, x];
 	}
 
 	public void setCase(int i, int j, bool sp, descrTexture type){
@@ -86,7 +87,6 @@ public class Plateau{
 	}
 
 	public void materializePlateau(){
-		float caseSize = Variables.getCaseSize();
 		int level = 0;
 		float coeffHauteur = Variables.getCoeffHauteur();
 		for (int i =0; i<hauteur; i++) {
@@ -95,21 +95,21 @@ public class Plateau{
 
 				//Création de l'objet Plane
 				GameObject plane = GameObject.CreatePrimitive(PrimitiveType.Quad);
-                plane.name = "case" + i + ":" + j;
+                plane.name = "case" + j + ":" + i;
 
 				level = plateau [i, j].getLevel ();
 
 				plane.transform.localScale = new Vector3(1f,1f,1f);
-				plane.transform.position = new Vector3 (j,(coeffHauteur * (float)level) ,i);
+				plane.transform.position = new Vector3 (i,(coeffHauteur * (float)level) ,j);
 				plane.transform.Rotate(90, 0, 0);
 
 				//On crée le cube qui accompagne le dessous des cases
 				//Valable pour les cases de level>0
 				if (level > 0) {
 					GameObject under = GameObject.CreatePrimitive (PrimitiveType.Cube);
-					under.name = "under" + i + ":" + j;
+					under.name = "under" + j + ":" + i;
 					under.transform.localScale = new Vector3 (1f, coeffHauteur * (float)level - 0.005f, 1f);
-					under.transform.position = new Vector3 (j,plane.transform.position.y / 2 ,i);
+					under.transform.position = new Vector3 (i,plane.transform.position.y / 2 ,j);
 
 					Material underMat = new Material(Shader.Find("Diffuse"));
 					underMat.color = Variables.getPlateauMainColor();
@@ -127,7 +127,7 @@ public class Plateau{
 				plane.GetComponent<Renderer>().material = mat;
 
 				//Afficher les items
-				materializeItemCases (plateau [i, j], i, j);
+				materializeItemCases (plateau [j, i], j, i);
 		
 			}
 
@@ -148,10 +148,9 @@ public class Plateau{
 
 	}
 
-	public void materializeItemCases(Case c, int x, int z)
+	public void materializeItemCases(Case c, int j, int i)
 	{
 		List<InterfaceItem> list = c.getItems ();
-		float caseSize = Variables.getCaseSize ();
 		float coeffHauteur = Variables.getCoeffHauteur();
 
 		if (list != null) 
@@ -163,6 +162,7 @@ public class Plateau{
 
 					//On crée le plan
 					GameObject plane = GameObject.CreatePrimitive(PrimitiveType.Quad);
+					plane.name = "elem" + i + ":"+j;
 					float ratio = item.getWidth() / (float)item.getHeight();
 					//Calcul de la taille de l'element
 					if(ratio < 1)
@@ -170,7 +170,7 @@ public class Plateau{
 					else
 						plane.transform.localScale = new Vector3 (1f * item.getFacto(), 1f / ratio * item.getFacto(), 1f * item.getFacto());
 					
-					plane.transform.localPosition = new Vector3 (z, (c.getLevel() * coeffHauteur) + (plane.transform.localScale.y / 2f), x);
+					plane.transform.localPosition = new Vector3 (j, (c.getLevel() * coeffHauteur) + (plane.transform.localScale.y / 2f), i);
 
 					//Shader
 					Material mat = new Material(Shader.Find("Transparent/Diffuse"));

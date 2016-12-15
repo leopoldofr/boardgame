@@ -30,7 +30,7 @@ public class Mouvements : MonoBehaviour {
 
 
     //Permet de déplacer le héros sur la case cible
-	public static void deplaceHeroe(List<GameObject> caseFull, Heroe heroe)
+	public static void deplaceHeroe(Plateau p, List<GameObject> caseFull, Heroe heroe)
     {
         int[] caseAddr = { -1, -1 };
         string nom = "";
@@ -58,8 +58,8 @@ public class Mouvements : MonoBehaviour {
 			return;
 
 		int PM = heroe.getPM ();
-		int x = heroe.getPosition () [1];
-		int y = heroe.getPosition () [0];
+		int x = heroe.getPosition () [0];
+		int y = heroe.getPosition () [1];
 
 		while (PM > 0 && (x != caseAddr[0] || y != caseAddr[1])) 
 		{
@@ -71,16 +71,13 @@ public class Mouvements : MonoBehaviour {
 				else
 					x = x + 1;
 
-				heroe.setPosition (x , y);
-
 			} else {
 				if (y - caseAddr [1] > 0)
 					y = y - 1;
 				else
 					y = y + 1;
-				heroe.setPosition (x, y);
 			}
-
+			heroe.setPosition (x, y);
 			PM = PM - 1;
 			Debug.Log ("PM = " + PM);
 		}
