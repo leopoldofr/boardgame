@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="assets\scripts\Actions.cs" />
      <Compile Include="assets\scripts\Afficheur.cs" />
      <Compile Include="assets\scripts\Camera\CameraMovement.cs" />
      <Compile Include="assets\scripts\Case.cs" />

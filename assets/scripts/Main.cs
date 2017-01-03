@@ -4,8 +4,9 @@ public class Main : MonoBehaviour {
 
 	public int caseSize = 3;
 	public Plateau plat;
-	//Heroe heroe = new Heroe("Leo", new int[] { 2, 2 }, "hero", 459, 617,10);
-	Heroe heroe = new Heroe("Leo", new int[] { 2, 2 }, "hero2", 357, 595,10);
+	public static int[] spawn = { 3, 2 };
+	Heroe heroe = new Heroe("Leo", spawn, "hero2", 357, 595,10);
+	Case currentCase;
 
     // Use this for initialization
     void Awake(){
@@ -26,8 +27,15 @@ public class Main : MonoBehaviour {
 
 		Debug.Log ("Lancement des affichages...");
         Afficheur.afficheJeu(plat, heroe);
-
+		currentCase = plat.getCase(heroe.getPosition ()[1],heroe.getPosition ()[0]);
+		Debug.Log (heroe.getPosition ()[1]+" + " +heroe.getPosition ()[0]);
     }
+
+	//GUI
+	void OnGUI()
+	{
+		Actions.joueTour ();
+	}
 
 	// Update is called once per frame
 	void Update () {
@@ -50,7 +58,6 @@ public class Main : MonoBehaviour {
 			Vector3 vect = new Vector3 (0f, 0f, -0.2f);
 			Camera.main.transform.position += vect;
 		}
-
 
         //Interaction Utilisateurs
         if (Input.GetMouseButtonDown(0))

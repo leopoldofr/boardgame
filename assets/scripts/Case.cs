@@ -13,6 +13,7 @@ public class Case{
 	private List<InterfaceItem> itemsCase;
 	private List<GameObject> gameObjects;
 	private int level;
+	private bool fouille;
 
 	//Constructeurs de Case
 
@@ -23,6 +24,7 @@ public class Case{
 		itemsCase =  new List<InterfaceItem>();
 		gameObjects = new List<GameObject> ();
 		level = 0;
+		fouille = false;
 	}
 
 	public Case (descrTexture t)
@@ -32,6 +34,7 @@ public class Case{
 		itemsCase =  new List<InterfaceItem>();
 		gameObjects = new List<GameObject> ();
 		level = 0;
+		fouille = false;
 	}
 
 	public Case(bool sp, descrTexture t, List<InterfaceItem> items){
@@ -39,6 +42,7 @@ public class Case{
 		texture = t;
 		itemsCase = items;
 		level = 0;
+		fouille = false;
 	}
 
 	//getters
@@ -105,6 +109,16 @@ public class Case{
 		gameObjects.Remove (obj);
 	}
 
+	public bool getFouille()
+	{
+		return fouille;
+	}
+
+	public void setFouille(bool t)
+	{
+		this.fouille = t;
+	}
+
 	public List<GameObject> getGameObjects()
 	{
 		return gameObjects; 
@@ -117,28 +131,6 @@ public class Case{
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
